@@ -99,3 +99,4 @@ class UserToolDetailView(RetrieveUpdateDestroyAPIView):
         if instance.user != request.user:
             return Response({"error": "Permission denied."}, status=status.HTTP_403_FORBIDDEN)
         return super().partial_update(request, *args, **kwargs)
+    
